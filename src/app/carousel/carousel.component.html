@@ -1,0 +1,37 @@
+
+
+
+<div class="images">
+ <div class = "addimg">
+    <img src="./assets/adddeal1.PNG">
+ </div>
+
+<div class ="fullcaro">
+
+<mat-carousel class="carousel"
+  timings="250ms ease-in"
+  [autoplay]="true"
+  interval="5000"
+  color="white"
+ 
+  maxWidth="100%"
+  proportion="40"
+  slides="5"
+  [loop]="true"
+  [hideArrows]="true"
+  [hideIndicators]="true"
+  [useKeyboard]="true"
+  [useMouseWheel]="true"
+  orientation="ltr"
+>
+  <mat-carousel-slide class ="carouselimg"
+    #matCarouselSlide
+    *ngFor="let slide of slides; let i = index"
+    [image]="slide.image"
+    overlayColor="#000000000"
+    [hideOverlay]="true"
+  ></mat-carousel-slide>
+</mat-carousel>
+</div>
+</div>
+

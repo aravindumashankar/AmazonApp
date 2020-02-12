@@ -1,0 +1,57 @@
+
+
+<div class="max-height">
+<mat-sidenav-container class="example-container">
+   
+    <mat-sidenav  class = "side-nav" color = "primary" mode="side" opened>
+        <div class = "center">
+        <Span>brand</Span><br>
+        <div>
+           
+       <mat-checkbox *ngFor="let button of checkbutton" >{{button}}<br></mat-checkbox>
+   
+    </div>
+
+<br>
+
+<span>Screen Size</span>
+<div>
+           
+    <mat-checkbox *ngFor="let button of checkscreen" >{{button}}<br></mat-checkbox>
+
+ </div>
+<br>
+
+ <span>Price Range</span>
+<div>
+           
+    <mat-checkbox *ngFor="let button of checkprice" >{{button}}<br></mat-checkbox>
+
+ </div>
+</div>
+
+    </mat-sidenav>
+
+
+ <mat-sidenav-content>
+    <div class = flexing>
+        <div *ngFor = "let button of products | async" (click)= detailspage(button.id)>
+            
+            <app-product-card [product]="button">
+
+                
+
+            </app-product-card>
+            
+        </div>
+        </div>
+   
+</mat-sidenav-content>
+
+
+
+  </mat-sidenav-container>
+</div>
+
+
+

@@ -1,0 +1,65 @@
+<div class="max-height">
+    <mat-sidenav-container class="example-container">
+       
+        <mat-sidenav  class = "side-nav" color = "primary" mode="side" opened>
+            <div class = "center">
+            <Span>brand</Span><br>
+            <div>
+               
+           <mat-checkbox *ngFor="let button of checkbutton" >{{button}}<br></mat-checkbox>
+       
+        </div>
+    
+    <br>
+    
+    <span>Screen Size</span>
+    <div>
+               
+        <mat-checkbox *ngFor="let button of checkscreen" >{{button}}<br></mat-checkbox>
+    
+     </div>
+    <br>
+    
+     <span>Price Range</span>
+    <div>
+               
+        <mat-checkbox *ngFor="let button of checkprice" >{{button}}<br></mat-checkbox>
+    
+     </div>
+    </div>
+    
+        </mat-sidenav>
+    
+    
+     <mat-sidenav-content>
+        <app-product-card [product]="prod">
+
+<!-- <p>{{prod.price}}</p>
+<p>{{prod.name}}</p> -->
+
+        </app-product-card>
+    
+    <p>{{prod.description}}</p>
+
+
+   <div class = "quantity">
+       <p>quantity
+           <input type = "text" [(ngModel)] = "quant"><br>
+           {{quant}}
+       </p>
+   </div>
+
+ 
+   <div class = "cart">
+    <button mat-button (click) = "addtocart(prod.id,quant)"> ADD to Cart</button>
+    </div>
+
+    </mat-sidenav-content>
+    
+    
+    
+      </mat-sidenav-container>
+    </div>
+    
+
+

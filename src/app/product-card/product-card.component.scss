@@ -1,0 +1,18 @@
+.cardsize
+{
+    width: 150px;
+height: 150px;
+}
+
+.headersize{
+margin-top: -10px;
+    
+
+}
+.mat-card-content>:first-child, .mat-card>:first-child {
+    margin-top: -10px;
+}
+
+.mat-card-content>:last-child:not(.mat-card-footer), .mat-card>:last-child:not(.mat-card-footer) {
+    margin-top: 7px;
+}

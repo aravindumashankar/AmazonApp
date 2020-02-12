@@ -1,0 +1,30 @@
+<mat-toolbar color="primary" >
+
+<mat-toolbar-row class = "firstrow">
+<button class ="home" mat-button (click) = home()> Retail Shoppe</button> 
+
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="search" value="">
+    </mat-form-field>
+  </form>
+
+<div class = "button">
+<button mat-button (click)= "login()">Login</button>
+</div>
+
+<div class = "cart">
+<button mat-button (click) = "cart()">Cart</button>
+</div>
+
+</mat-toolbar-row>
+
+
+
+
+<mat-toolbar-row class = mattoolbar>
+<button mat-button *ngFor="let button of buttons2" (click)="buttonClick(button.path)">{{button.label}}</button>
+</mat-toolbar-row>
+
+</mat-toolbar>
+
